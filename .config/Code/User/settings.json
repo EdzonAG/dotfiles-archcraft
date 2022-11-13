@@ -1,0 +1,35 @@
+{
+    "workbench.startupEditor": "none",
+    "workbench.iconTheme": "material-icon-theme",
+    "latex-utilities.message.update.show": false,
+    "latex-workshop.latex.outDir": "%DIR%/build",
+    "workbench.colorTheme": "Flatland Monokai",
+    "explorer.confirmDelete": false,
+    "spellright.notificationClass": "information",
+    "editor.fontFamily": "'Victor Mono', monospace",
+    "editor.fontLigatures": true,
+    "workbench.editorAssociations": {
+        "*.pdf": "latex-workshop-pdf-hook"
+    },
+    "doki.sticker.css": "background-position:100% 98.4%",
+    "editor.linkedEditing": true,
+    "explorer.confirmDragAndDrop": false,
+    "spellright.language": [
+        "es_MX"
+    ],
+    "spellright.documentTypes": [
+        "markdown",
+        "latex"
+    ],
+    "git.enableSmartCommit": true,
+    "[css]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "liveServer.settings.donotShowInfoMsg": true,
+    "window.menuBarVisibility": "toggle",
+    "doki.statusbar.name": "Kobeni",
+    "workbench.activityBar.visible": false,
+    "terminal.integrated.fontFamily": "Hack Nerd font",
+    "security.workspace.trust.untrustedFiles": "open",
+    "window.zoomLevel": 1
+}

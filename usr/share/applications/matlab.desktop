@@ -1,0 +1,8 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Type=Application
+Icon=/usr/share/icons/matlab.png
+Name=MATLAB R2022b
+Comment=Start MATLAB - The Language of Technical Computing
+Exec=zsh .local/run.sh
+Categories=Development;

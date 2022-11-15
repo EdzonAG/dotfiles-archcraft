@@ -247,7 +247,7 @@ type = internal/date
 
 interval = 1.0
 
-time = %I:%M %p
+time = %H時:%M分
 
 format = <label>
 format-prefix = " "
@@ -265,12 +265,12 @@ type = internal/date
 interval = 1.0
 
  
-time = %A, %d %B %Y
+time = %a - %m月 %d日 %Y年
 
 format = <label>
 format-prefix = " "
 format-prefix-font = 3
-format-prefix-foreground = ${color.RED}
+format-prefix-foreground = ${color.BLUE}
 
 label = %time%
 label-font = 4
@@ -384,6 +384,30 @@ content-foreground = ${color.BLACK}
 content-padding = 2
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/title]
+type = internal/xwindow
+
+format-padding = 0
+format-foreground = #7984A7
+
+label = %title%
+label-maxlen = 50
+label-font = 2
+
+[module/cpu]
+type = internal/cpu
+interval = 2
+format-prefix = " "
+format-prefix-foreground = #A4C161
+label = %percentage%%
+
+[module/memory]
+type = internal/memory
+interval = 2
+format-prefix = " "
+format-prefix-foreground = #FFC56D
+label = %percentage_used%%
 
 [module/caffeine]  
 type = custom/menu  

@@ -11,7 +11,7 @@
     "workbench.editorAssociations": {
         "*.pdf": "latex-workshop-pdf-hook"
     },
-    "doki.sticker.css": "background-position:100% 98.4%",
+    "doki.sticker.css": "background-position:100% 97.5%",
     "editor.linkedEditing": true,
     "explorer.confirmDragAndDrop": false,
     "spellright.language": [
@@ -31,5 +31,8 @@
     "workbench.activityBar.visible": false,
     "terminal.integrated.fontFamily": "Hack Nerd font",
     "security.workspace.trust.untrustedFiles": "open",
+    "[latex]": {
+        "editor.defaultFormatter": "nickfode.latex-formatter"
+    },
     "window.zoomLevel": 1
 }

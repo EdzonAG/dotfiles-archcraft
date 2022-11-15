@@ -1,0 +1,6 @@
+#!/bin/bash
+
+my_laptop_external_monitor=$(xrandr --query | grep 'HDMI-A-0')
+if [[ $my_laptop_external_monitor = *connected* ]]; then
+    xrandr --output eDP --primary --mode 1920x1080 --rotate normal --output HDMI-A-0 --mode 1920x1080 --set underscan on --set "underscan vborder" 40 --set "underscan hborder" 72 --rotate normal --above eDP &
+fi

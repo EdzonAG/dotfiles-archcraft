@@ -35,9 +35,8 @@ git clone https://github.com/EdzonAG/dotfiles-archcraft.git
 > betterlockscreen -u /path/to/wallpaper.png
 To apply The GTK Theme and icons, you can use LXappearance  
 
+## UwU
 
-
-
-## Desktop
+![UwU](https://pbs.twimg.com/media/EYY6jC6UYAIjMnR.jpg)
 
 

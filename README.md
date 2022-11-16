@@ -27,6 +27,7 @@ git clone https://github.com/EdzonAG/dotfiles-archcraft.git
 * install the required fonts by copying *usr* directory to your */* directory      
 > **Note : for Source han and ttf-font-awesome, install it from your repository**          
 > **Arch : sudo pacman -S adobe-source-han-sans-jp-fonts ttf-font-awesome**
+* Install powerlevel10k on your .config directory
 * copy all .config files to your .config directory
 * install oh-my zsh then manually then move .zshrc into your home directory
 * manually install the plug by opening vimrc using vim then instal the plugin using :PlugInstall   

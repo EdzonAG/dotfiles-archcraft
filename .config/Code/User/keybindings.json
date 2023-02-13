@@ -1,152 +1,63 @@
 // Place your key bindings in this file to override the defaultsauto[]
 [
     {
-        "key": "ctrl+alt+[Period]",
-        "command": "latex-workshop.view",
-        "when": "!config.latex-workshop.bind.altKeymap.enabled && !virtualWorkspace && editorLangId =~ /^latex$|^latex-expl3$|^rsweave$|^jlweave$/"
-    },
-    {
         "key": "ctrl+alt+v",
         "command": "-latex-workshop.view",
         "when": "!config.latex-workshop.bind.altKeymap.enabled && !virtualWorkspace && editorLangId =~ /^latex$|^latex-expl3$|^rsweave$|^jlweave$/"
+    },
+    {
+        "key": "ctrl+shift+i",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+shift+i",
+        "command": "workbench.action.terminal.focus",
+        "when": "!terminalFocus"
+    },
+    {
+        "key": "ctrl+shift+w",
+        "command": "workbench.action.terminal.kill",
+        "when": "terminalFocus"
     },
     {
         "key": "alt+n",
         "command": "explorer.newFile"
     },
     {
-        "key": "alt+f",
-        "command": "explorer.newFolder"
-    },
-    {
         "key": "ctrl+[Semicolon]",
         "command": "workbench.action.terminal.new"
     },
     {
-        "key": "ctrl+d ctrl+right",
-        "command": "workbench.action.positionPanelRight"
-    },
-    {
-        "key": "ctrl+alt+v",
-        "command": "python.execInTerminal-icon"
-    },
-    {
-        "key": "shift+alt+x",
-        "command": "editor.action.copyLinesUpAction",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "ctrl+shift+alt+up",
-        "command": "-editor.action.copyLinesUpAction",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "shift+alt+z",
-        "command": "editor.action.copyLinesDownAction",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "ctrl+shift+alt+down",
-        "command": "-editor.action.copyLinesDownAction",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "ctrl+shift+w",
-        "command": "-workbench.action.closeWindow"
-    },
-    {
-        "key": "ctrl+shift+w",
-        "command": "workbench.action.terminal.killAll"
-    },
-    {
-        "key": "ctrl+alt+z",
-        "command": "workbench.action.closePanel"
-    },
-    {
-        "key": "ctrl+k i",
-        "command": "terminal.focus"
-    },
-    {
-        "key": "ctrl+k j",
-        "command": "workbench.action.terminal.focus"
-    },
-    {
-        "key": "ctrl+k h",
-        "command": "workbench.action.terminal.kill"
-    },
-    {
-        "key": "ctrl+k 1",
-        "command": "workbench.action.terminal.focusNextPane",
-        "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
-    },
-    {
-        "key": "alt+right",
-        "command": "-workbench.action.terminal.focusNextPane",
-        "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
-    },
-    {
-        "key": "ctrl+d ctrl+down",
-        "command": "workbench.action.positionPanelBottom"
-    },
-    {
-        "key": "ctrl+alt+[Comma]",
-        "command": "latex-workshop.viewExternal"
-    },
-    {
-        "key": "ctrl+left",
-        "command": "workbench.action.terminal.focusPrevious",
-        "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
-    },
-    {
-        "key": "ctrl+pageup",
-        "command": "-workbench.action.terminal.focusPrevious",
-        "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
-    },
-    {
-        "key": "ctrl+right",
-        "command": "workbench.action.terminal.focusNext",
-        "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
-    },
-    {
-        "key": "ctrl+pagedown",
-        "command": "-workbench.action.terminal.focusNext",
-        "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
-    },
-    {
-        "key": "ctrl+shift+alt+enter",
-        "command": "notebook.cell.insertMarkdownCellAbove"
+        "key": "alt+y",
+        "command": "workbench.action.splitEditorRight"
     },
     {
         "key": "ctrl+alt+enter",
-        "command": "notebook.cell.insertMarkdownCellBelow"
+        "command": "notebook.cell.insertCodeCellBelow",
+        "when": "notebookCellListFocused && !inputFocus"
     },
     {
-        "key": "shift+alt+delete",
-        "command": "notebook.cell.delete",
+        "key": "ctrl+enter",
+        "command": "-notebook.cell.insertCodeCellBelow",
+        "when": "notebookCellListFocused && !inputFocus"
+    },
+    {
+        "key": "ctrl+alt+d",
+        "command": "notebook.clearAllCellsOutputs"
+    },
+    {
+        "key": "e",
+        "command": "notebook.cell.cancelExecution",
         "when": "notebookEditorFocused && !inputFocus"
     },
     {
-        "key": "d d",
-        "command": "-notebook.cell.delete",
-        "when": "notebookEditorFocused && !inputFocus"
+        "key": "shift+alt+enter",
+        "command": "notebook.execute"
     },
     {
-        "key": "delete",
-        "command": "-notebook.cell.delete",
-        "when": "notebookEditorFocused && !inputFocus"
-    },
-    {
-        "key": "shift+alt+delete",
-        "command": "jupyter.deleteCells",
-        "when": "editorTextFocus && jupyter.hascodecells && !jupyter.webExtension && !notebookEditorFocused"
-    },
-    {
-        "key": "ctrl+shift+[Comma] x",
-        "command": "-jupyter.deleteCells",
-        "when": "editorTextFocus && jupyter.hascodecells && !jupyter.webExtension && !notebookEditorFocused"
-    },
-    {
-        "key": "ctrl+d ctrl+left",
-        "command": "workbench.action.positionPanelLeft"
+        "key": "ctrl+]",
+        "command": "editor.action.commentLine",
+        "when": "editorTextFocus && !editorReadonly"
     }
 ]

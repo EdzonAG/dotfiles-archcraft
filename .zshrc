@@ -71,10 +71,10 @@ zstyle ':omz:update' mode disabled  # disable automatic updates
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-git
-zsh-syntax-highlighting
-zsh-autosuggestions
-)
+	git
+	zsh-syntax-highlighting
+	zsh-autosuggestions
+	)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -126,15 +126,22 @@ alias zshconfig="geany ~/.zshrc"
 alias ohmyzsh="thunar ~/.oh-my-zsh"
 
 # ls
-alias l='ls -lh'
+alias lh='ls -lh'
 alias ll='ls -lah'
 alias la='ls -A'
 alias lm='ls -m'
 alias lr='ls -R'
 alias lg='ls -l --group-directories-first'
+alias l='logo-ls'
 
-#Bindkeys
 bindkey '^H' backward-kill-word
+
+alias mtlb='/usr/local/MATLAB/R2022b/bin/matlab -nodisplay -nosplash -nodesktop'
+alias ck='tty-clock -sc -C 4'
+alias cl='echo "\nCALENDAR\n" && cal --months 6'
+alias n='neofetch'
+alias nv='nvim'
+alias tvfix='xrandr --output HDMI-A-0 --set underscan on --set "underscan vborder" 40 --set "underscan hborder" 80'
 
 # git
 alias gcl='git clone --depth 1'
@@ -142,7 +149,7 @@ alias gi='git init'
 alias ga='git add'
 alias gc='git commit -m'
 alias gp='git push origin master'
+source ~/.powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-source ~/.config/powerlevel10k/powerlevel10k.zsh-theme

@@ -1,5 +1,4 @@
 <!-- Copyright (C) 2020-2022 Aditya Shakya <adi1090x@gmail.com> -->
-<!-- Everyone is permitted to copy and distribute copies of this file under GNU-GPL3 -->
 <?xml version="1.0" encoding="UTF-8"?>
 <actions>
 <action>
@@ -16,7 +15,7 @@
 	<icon>go-parent-folder</icon>
 	<name>Open as root</name>
 	<unique-id>1622790717174452-1</unique-id>
-	<command>~/.config/openbox/rofi/bin/apps_as_root &apos;dbus-run-session thunar&apos;</command>
+	<command>~/.config/openbox-themes/scripts/asroot &apos;dbus-run-session thunar&apos;</command>
 	<description>Open directory as root</description>
 	<patterns>*</patterns>
 	<directories/>
@@ -25,7 +24,7 @@
 	<icon>document-edit-sign</icon>
 	<name>Edit as root</name>
 	<unique-id>1622790919788057-2</unique-id>
-	<command>~/.config/openbox/rofi/bin/apps_as_root &apos;geany %f&apos;</command>
+	<command>~/.config/openbox-themes/scripts/asroot &apos;geany %f&apos;</command>
 	<description>Edit file as root</description>
 	<patterns>*</patterns>
 	<text-files/>
@@ -39,20 +38,6 @@
 	<patterns>*</patterns>
 	<directories/>
 	<text-files/>
-</action>
-<action>
-	<icon>kr_diskusage</icon>
-	<name>Disk Usage</name>
-	<unique-id>1622791401529558-3</unique-id>
-	<command>baobab %d</command>
-    <description>Disk usages by directory and its sub directories</description>
-	<patterns>*</patterns>
-	<directories/>
-	<audio-files/>
-	<image-files/>
-	<other-files/>
-	<text-files/>
-	<video-files/>
 </action>
 <action>
 	<icon>view-preview</icon>

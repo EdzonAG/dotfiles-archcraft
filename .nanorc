@@ -5,3 +5,6 @@ set mouse
 set nohelp
 set softwrap
 set linenumbers
+set titlecolor black,blue
+set numbercolor black,blue
+set statuscolor black,blue

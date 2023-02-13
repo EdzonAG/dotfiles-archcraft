@@ -1,17 +1,19 @@
 {
+    "vscode_custom_css.imports": [
+        "file:///home/edzonag/Templates/synthwave84.css"
+    ],
     "workbench.startupEditor": "none",
     "workbench.iconTheme": "material-icon-theme",
     "latex-utilities.message.update.show": false,
     "latex-workshop.latex.outDir": "%DIR%/build",
-    "workbench.colorTheme": "Flatland Monokai",
     "explorer.confirmDelete": false,
-    "spellright.notificationClass": "information",
-    "editor.fontFamily": "'Victor Mono', monospace",
+    "spellright.notificationClass": "hint",
+    "editor.fontFamily": "Agave Nerd font",
     "editor.fontLigatures": true,
     "workbench.editorAssociations": {
         "*.pdf": "latex-workshop-pdf-hook"
     },
-    "doki.sticker.css": "background-position:100% 97.5%",
+    "doki.sticker.css": "background-size:220px;background-position:100% 96.1%",
     "editor.linkedEditing": true,
     "explorer.confirmDragAndDrop": false,
     "spellright.language": [
@@ -26,13 +28,25 @@
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "liveServer.settings.donotShowInfoMsg": true,
-    "window.menuBarVisibility": "toggle",
-    "doki.statusbar.name": "Kobeni",
-    "workbench.activityBar.visible": false,
     "terminal.integrated.fontFamily": "Hack Nerd font",
     "security.workspace.trust.untrustedFiles": "open",
     "[latex]": {
         "editor.defaultFormatter": "nickfode.latex-formatter"
     },
-    "window.zoomLevel": 1
+    "matlab.matlabpath": "/usr/local/MATLAB/R2022b/bin/matlab",
+    "matlab.mlintpath": "/usr/local/MATLAB/R2022b/bin/glnxa64/mlint",
+    "editor.fontSize": 16,
+    "window.titleBarStyle": "native",
+    "window.customMenuBarAltFocus": false,
+    "window.enableMenuBarMnemonics": false,
+    "editor.unicodeHighlight.nonBasicASCII": false,
+    "workbench.colorTheme": "SynthWave '84",
+    "doki.background.path": "/home/edzonag/Templates/Img/wall0.png",
+    "doki.wallpaper.path": "/home/edzonag/Templates/Img/wall1.png",
+    "doki.sticker.path": "/home/edzonag/Templates/Img/bocchi.png",
+    "doki.statusbar.name": "レム",
+    "window.zoomLevel": 1,
+    "workbench.sideBar.location": "right",
+    "window.menuBarVisibility": "toggle",
+    "workbench.activityBar.visible": false
 }

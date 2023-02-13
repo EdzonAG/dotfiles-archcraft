@@ -1,429 +1,216 @@
 {
-	// Place your snippets for latex here. Each snippet is defined under a snippet name and has a prefix, body and 
-	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
-	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
-	// same ids are connected.
-	// Example:
-	// "Print to console": {
-	// 	"prefix": "log",
-	// 	"body": [
-	// 		"console.log('$1');",
-	// 		"$2"
-	// 	],
-	// 	"description": "Log output to console"
-	// }
-	"insert assignment template": {
-		"prefix": "\\assignment",
+	"initial settings": {
+		"prefix": "@¬",
 		"body": [
-		"%-------------------------------------------------------------------------------------------------%",
-		"\\documentclass[12pt,oneside]{book}",
-		"%-------------------------------------------------------------------------------------------------%",
-		"\\usepackage[spanish]{babel}",
-		"\\usepackage[margin=1in]{geometry}",
-		"\\usepackage[hidelinks]{hyperref}",
-		"\\usepackage{amssymb,amsmath,amsthm,amsfonts}",
-		"\\usepackage{enumerate}",
-		"\\usepackage{datetime}",
-		"\\usepackage{graphicx}",
-		"\\usepackage{titlesec}",
-		"\\usepackage{parskip}",
-		"\\usepackage{apacite}",
-		"\\usepackage{lipsum}",
-		"\\usepackage{color}",
-		"\\usepackage{float}",
-		"\\usepackage{cancel}",
-		"%-------------------------------------------------------------------------------------------------%",
-		"\\titleformat{\\chapter}{\\normalfont\\huge}{\\thechapter.}{20pt}{\\huge \\bf}",
-		"\\newenvironment{solution}{\\begin{proof}[Solución]}{\\end{proof}}",
-		"\\renewcommand{\\qedsymbol}{\\rule{0.7em}{0.7em}}",
-		"\\newdateformat{yeardate}{\\THEYEAR}",
-		"\\newtheorem{proposition}{Proposición}",
-		"\\newtheorem{observation}{Observación}",
-		"\\newtheorem{afirmation}{Afirmación}",
-		"\\newtheorem{definition}{Definición}",
-		"\\newtheorem{corollary}{Corolario}",
-		"\\newtheorem{exercise}{Ejercicio}",
-		"\\newtheorem{theorem}{Teorema}",
-		"\\newtheorem{example}{Ejemplo}",
-		"\\newtheorem{lemma}{Lema}",
-		"\\graphicspath{{Img/}}",
-		"\\decimalpoint",
-		"%-------------------------------------------------------------------------------------------------%",
-		"\\title{${1:Asignatura}}",
-		"\\author{Edzon Alanis}",
-		"\\date{\\today}",
-		"%-------------------------------------------------------------------------------------------------%",
-		"\\makeatletter",
-		"\\let\\thetitle\\@title",
-		"\\let\\theauthor\\@author",
-		"\\let\\thedate\\@date",
-		"\\makeatother",
-		"%-------------------------------------------------------------------------------------------------%",
-		"\\begin{document}",
-		"%-------------------------------------------------------------------------------------------------%",
-		"\\begin{titlepage}",
-		"\\centering",
-		"\\includegraphics[width=0.9\\linewidth]{../logo.png}\\\\\\[2.0 cm]",
-		"\\textsc{\\LARGE Escuela Superior de Física y Matemáticas}\\\\\\[1.2 cm]",
-		"\\textsc{\\Large Instituto Politécnico Nacional}\\\\\\[2.5 cm]",
-		"\\rule{\\linewidth}{0.2 mm} \\\\\\[0.4 cm]",
-		"{\\huge \\bfseries \\thetitle}\\\\\\",
-		"\\rule{\\linewidth}{0.2 mm} \\\\\\[2.5 cm]",
-		"\\textsc{\\large \\theauthor}",
-		"\\vfill",
-		"{\\large \\yeardate\\today}",
-		"\\end{titlepage}",
-		"%-------------------------------------------------------------------------------------------------%",
-		"\\tableofcontents",
-		"%-------------------------------------------------------------------------------------------------%",
-		"\\chapter{${2:}}",
-		"%-------------------------------------------------------------------------------------------------%",
-		"",
-		"${3:}",
-		"",
-		"%-------------------------------------------------------------------------------------------------%",
-		"\\end{document}",
-		"%-------------------------------------------------------------------------------------------------%"
+			"% PACKAGES",
+			"\\usepackage[utf8]{inputenc}",
+			"\\usepackage[spanish]{babel} ",
+			"\\usepackage[hidelinks]{hyperref}",
+			"\\usepackage[margin = 1in]{geometry}",
+			"\\usepackage{amssymb,amsmath,amsthm,amsfonts}",
+			"\\usepackage{framed}",
+			"\\usepackage{enumerate}",
+			"\\usepackage{multicol}",
+			"\\usepackage{graphicx}",
+			"\\usepackage{parskip}",
+			"\\usepackage{float}",
+			"\\usepackage{cancel}",
+			"\\usepackage{cellspace}",
+			"\\usepackage{fancyhdr}",
+			"\\usepackage{listings}",
+			"",
+			"% SETTINGS",
+			"\\newcommand{\\doublerule}[1][.4pt]{\\noindent\\makebox[0pt][l]{\\rule[.7ex]{\\linewidth}{#1}}\\rule[.1ex]{\\linewidth}{#1}}",
+			"\\renewcommand{\\qedsymbol}{\\rule{0.7em}{0.7em}}",
+			"\\addto\\captionsspanish{\\renewcommand{\\contentsname}{Índice}}",
+			"\\newcolumntype{M}[1]{>{\\centering\\arraybackslash}m{#1}}",
+			"\\newenvironment{solution}{\\begin{proof}[Solución]}{\\end{proof}}",
+			"\\graphicspath{{./img/}}",
+			"\\decimalpoint",
+			"",
+			"% HEAD AND FOOT",
+			"% \\setlength{\\headheight}{25pt}",
+			"% \\setlength{\\footskip}{25pt}",
+			"% \\pagestyle{fancy}",
+			"% \\renewcommand{\\footrulewidth}{0.4pt}",
+			"% \\fancyhf{}",
+			"% \\fancypagestyle{empty}{",
+			"%     \\fancyhf{}",
+			"% }",
+			"",
+			"% REPORT OR BOOK",
+			"% \\titleformat{\\chapter}{\\normalfont\\huge}{\\thechapter.}{20pt}{\\huge \\bf}",
+			"% \\titlespacing{\\chapter}{0pt}{0pt}{1cm}",
+			"",
+			"% THEOREMS",
+			"\\newtheorem*{observation}{Observación}",
+			"\\newtheorem*{definition}{Definición}",
+			"\\newtheorem*{theorem}{Teorema}",
+			"\\newtheorem*{example}{Ejemplo}",
+			"\\newtheorem*{lemma}{Lema}",
+			"",
+			"% DATA",
+			"\\title{Título}",
+			"\\author{Yo}",
+			"\\date{\\today}",
+			"\\newcommand{\\signature}{Materia}",
+			"\\newcommand{\\professor}{Profesor}",
+			"\\newcommand{\\titlepagelogo}{./img/logo.png}",
+			"",
+			"% SET VARIABLES",
+			"\\makeatletter",
+			"\\let\\thetitle\\@title",
+			"\\let\\theauthor\\@author",
+			"\\let\\thedate\\@date",
+			"\\makeatother"
 		],
-		"description": "insert assignment template"
+		"description": "initial settings"
 	},
-	"insert school template": {
-		"prefix": "\\schooltemplate",
+	"titlepage template": {
+		"prefix": "@1",
 		"body": [
-		"%-------------------------------------------------------------------------------------------------%",
-		"\\documentclass[12pt]{article}",
-		"%-------------------------------------------------------------------------------------------------%",
-		"\\usepackage[spanish]{babel}",
-		"\\usepackage[margin=1in]{geometry}",
-		"\\usepackage[hidelinks]{hyperref}",
-		"\\usepackage{amssymb,amsmath,amsthm,amsfonts}",
-		"\\usepackage{enumerate}",
-		"\\usepackage{graphicx}",
-		"\\usepackage{lipsum}",
-		"\\usepackage{parskip}",
-		"\\usepackage{float}",
-		"\\usepackage{color}",
-		"\\usepackage{cancel}",
-		"%-------------------------------------------------------------------------------------------------%",
-		"\\newenvironment{solution}{\\begin{proof}[Solución]}{\\end{proof}}",
-		"\\renewcommand{\\qedsymbol}{\\rule{0.7em}{0.7em}}",
-		"\\newtheorem{proposition}{Proposición}",
-		"\\newtheorem{observation}{Observación}",
-		"\\newtheorem{afirmation}{Afirmación}",
-		"\\newtheorem{definition}{Definición}",
-		"\\newtheorem{corollary}{Corolario}",
-		"\\newtheorem{exercise}{Ejercicio}",
-		"\\newtheorem{theorem}{Teorema}",
-		"\\newtheorem{example}{Ejemplo}",
-		"\\newtheorem{lemma}{Lema}",
-		"\\graphicspath{{Img/}}",
-		"\\decimalpoint",
-		"%-------------------------------------------------------------------------------------------------%",
-		"\\title{${1:Título}}",
-		"\\author{Edzon Alanis}",
-		"%-------------------------------------------------------------------------------------------------%",
-		"\\begin{document}",
-		"\\maketitle",
-		"%-------------------------------------------------------------------------------------------------%",
-		"",
-		"${2:}",
-		"",
-		"%-------------------------------------------------------------------------------------------------%",
-		"\\end{document}",
-		"%-------------------------------------------------------------------------------------------------%"
+			"\\begin{titlepage}",
+			"\t\\centering",
+			"\t\\includegraphics[width=0.9\\linewidth]{./img/logo.png}\\\\\\[1.2 cm]",
+			"\t\\textsc{\\LARGE Escuela Superior de Física y Matemáticas}\\\\\\[1.2 cm]",
+			"\t\\textsc{\\Large Instituto Politécnico Nacional}\\\\\\[1.0 cm]",
+			"\t\\doublerule[1pt] \\\\\\[0.8 cm]",
+			"\t{\\huge \\textbf{\\thetitle}}\\\\\\[0.4 cm]",
+			"\t\\textsc{\\LARGE \\signature} \\\\\\[0.3cm]",
+			"\t\\doublerule[1pt] \\\\\\[1.0 cm]",
+			"\t\\textsc{\\large \\theauthor}",
+			"\t% \\vfill",
+			"\t% \\includegraphics[width=\\textwidth,height=6cm,keepaspectratio]{\\titlepagelogo}",
+			"\t\\vfill",
+			"\t{\\large \\today}",
+			"\\end{titlepage}"
 		],
-		"description": "insert school template"
-	},
-	"insert normal template": {
-		"prefix": "\\normaltemplate",
-		"body": [
-		"%-------------------------------------------------------------------------------------------------%",
-		"\\documentclass[12pt]{article}",
-		"%-------------------------------------------------------------------------------------------------%",
-		"\\usepackage[spanish]{babel}",
-		"\\usepackage[margin=1in]{geometry}",
-		"\\usepackage[hidelinks]{hyperref}",
-		"\\usepackage{amssymb,amsmath,amsthm,amsfonts}",
-		"\\usepackage{enumerate}",
-		"\\usepackage{graphicx}",
-		"\\usepackage{lipsum}",
-		"\\usepackage{parskip}",
-		"\\usepackage{float}",
-		"\\usepackage{color}",
-		"\\usepackage{cancel}",
-		"%-------------------------------------------------------------------------------------------------%",
-		"\\newenvironment{solution}{\\begin{proof}[Solución]}{\\end{proof}}",
-		"\\renewcommand{\\qedsymbol}{\\rule{0.7em}{0.7em}}",
-		"\\graphicspath{{Img/}}",
-		"\\decimalpoint",
-		"%-------------------------------------------------------------------------------------------------%",
-		"\\title{${1:Título}}",
-		"\\author{Edzon AG}",
-		"%-------------------------------------------------------------------------------------------------%",
-		"\\begin{document}",
-		"\\maketitle",
-		"%-------------------------------------------------------------------------------------------------%",
-		"",
-		"${2:}",
-		"",
-		"%-------------------------------------------------------------------------------------------------%",
-		"\\end{document}",
-		"%-------------------------------------------------------------------------------------------------%"
-		],
-		"description": "insert normal template"
-	},
-	"insert homework template": {
-		"prefix": "\\homeworktemplate",
-		"body": [
-		"%-------------------------------------------------------------------------------------------------%",
-		"\\documentclass[12pt]{article}",
-		"%-------------------------------------------------------------------------------------------------%",
-		"\\usepackage[spanish]{babel}",
-		"\\usepackage[margin=1in]{geometry}",
-		"\\usepackage[hidelinks]{hyperref}",
-		"\\usepackage{amssymb,amsmath,amsthm,amsfonts}",
-		"\\usepackage{enumerate}",
-		"\\usepackage{graphicx}",
-		"\\usepackage{datetime}",
-		"\\usepackage{parskip}",
-		"\\usepackage{apacite}",
-		"\\usepackage{lipsum}",
-		"\\usepackage{color}",
-		"\\usepackage{float}",
-		"\\usepackage{cancel}",
-		"%-------------------------------------------------------------------------------------------------%",
-		"\\newenvironment{solution}{\\begin{proof}[Solución]}{\\end{proof}}",
-		"\\renewcommand{\\qedsymbol}{\\rule{0.7em}{0.7em}}",
-		"\\newtheorem{proposition}{Proposición}",
-		"\\newtheorem{observation}{Observación}",
-		"\\newtheorem{afirmation}{Afirmación}",
-		"\\newtheorem{definition}{Definición}",
-		"\\newtheorem{corollary}{Corolario}",
-		"\\newtheorem{exercise}{Ejercicio}",
-		"\\newtheorem{theorem}{Teorema}",
-		"\\newtheorem{example}{Ejemplo}",
-		"\\newtheorem{lemma}{Lema}",
-		"\\graphicspath{{Img/}}",
-		"\\decimalpoint",
-		"%-------------------------------------------------------------------------------------------------%",
-		"\\title{${1:Título}}",
-		"\\author{Edzon Alanis}",
-		"\\date{\\today}",
-		"%-------------------------------------------------------------------------------------------------%",
-		"\\makeatletter",
-		"\\let\\thetitle\\@title",
-		"\\let\\theauthor\\@author",
-		"\\let\\thedate\\@date",
-		"\\makeatother",
-		"%-------------------------------------------------------------------------------------------------%",
-		"\\begin{document}",
-		"%-------------------------------------------------------------------------------------------------%",
-		"\\begin{titlepage}",
-		"\\centering",
-		"\\includegraphics[width=0.9\\linewidth]{../logo.png}\\\\\\[2.0 cm]",
-		"\\textsc{\\LARGE Escuela Superior de Física y Matemáticas}\\\\\\[1.2 cm]",
-		"\\textsc{\\Large Instituto Politécnico Nacional}\\\\\\[2.5 cm]",
-		"\\rule{\\linewidth}{0.2 mm} \\\\\\[0.4 cm]",
-		"{\\huge \\bfseries \\thetitle}\\\\\\",
-		"\\rule{\\linewidth}{0.2 mm} \\\\\\[2.5 cm]",
-		"\\textsc{\\large \\theauthor}",
-		"\\vfill",
-		"{\\large \\thedate}",
-		"\\end{titlepage}",
-		"%-------------------------------------------------------------------------------------------------%",
-		"",
-		"${2:}",
-		"",
-		"%-------------------------------------------------------------------------------------------------%",
-		"\\end{document}",
-		"%-------------------------------------------------------------------------------------------------%"
-		],
-		"description": "insert special template"
+		"description": "titlepage template"
 	},
 	"insert image": {
-		"prefix": "\\image",
+		"prefix": "@image",
 		"body": [
-		"\\begin{figure}[H]",
-		"    \\centering",
-		"    \\includegraphics[width = ${1:Tamaño}\\textwidth]{${2:Nombre}}",
-		"\\end{figure}"
+			"\\begin{figure}[H]",
+			"    \\centering",
+			"    \\includegraphics[width = \\textwidth, height = ${1:Altura}, keepaspectratio]{${2:Nombre}}",
+			"\\end{figure}"
 		],
 		"description": "insert image"
 	},
-	"insert proposition": {
-		"prefix": "\\iproposition",
-		"body": [
-		"\\begin{proposition}",
-		"    ${1:}",
-		"\\end{proposition}"
-		],
-		"description": "insert proposition"
-	},
 	"insert observation": {
-		"prefix": "\\iobservation",
+		"prefix": "@observation",
 		"body": [
-		"\\begin{observation}",
-		"    ${1:}",
-		"\\end{observation}"
+			"\\begin{observation}",
+			"    ${1:}",
+			"\\end{observation}"
 		],
 		"description": "insert observation"
 	},
 	"insert definition": {
-		"prefix": "\\idefinition",
+		"prefix": "@definition",
 		"body": [
-		"\\begin{definition}",
-		"    ${1:}",
-		"\\end{definition}"
+			"\\begin{definition}",
+			"    ${1:}",
+			"\\end{definition}"
 		],
 		"description": "insert definition"
 	},
-	"insert corollary": {
-		"prefix": "\\icorollary",
-		"body": [
-		"\\begin{corollary}",
-		"    ${1:}",
-		"\\end{corollary}"
-		],
-		"description": "insert corollary"
-	},
 	"insert lemma": {
-		"prefix": "\\ilemma",
+		"prefix": "@lemma",
 		"body": [
-		"\\begin{lemma}",
-		"    ${1:}",
-		"\\end{lemma}"
+			"\\begin{lemma}",
+			"    ${1:}",
+			"\\end{lemma}"
 		],
 		"description": "insert lemma"
 	},
 	"insert example": {
-		"prefix": "\\iexample",
+		"prefix": "@example",
 		"body": [
-		"\\begin{example}",
-		"    ${1:}",
-		"\\end{example}"
+			"\\begin{example}",
+			"    ${1:}",
+			"\\end{example}"
 		],
 		"description": "insert example"
 	},
-	"insert exercise": {
-		"prefix": "\\iexercise",
-		"body": [
-		"\\begin{exercise}",
-		"    ${1:}",
-		"\\end{exercise}"
-		],
-		"description": "insert exercise"
-	},
 	"insert theorem": {
-		"prefix": "\\itheorem",
+		"prefix": "@theorem",
 		"body": [
-		"\\begin{theorem}",
-		"    ${1:}",
-		"\\end{theorem}"
+			"\\begin{theorem}",
+			"    ${1:}",
+			"\\end{theorem}"
 		],
 		"description": "insert theorem"
 	},
-	"insert afirmation": {
-		"prefix": "\\iafirmation",
-		"body": [
-		"\\begin{afirmation}",
-		"    ${1:}",
-		"\\end{afirmation}"
-		],
-		"description": "insert afirmation"
-	},
 	"insert solution": {
-		"prefix": "\\isolution",
+		"prefix": "@solution",
 		"body": [
-		"\\begin{solution}",
-		"    ${1:}",
-		"\\end{solution}"
+			"\\begin{solution}",
+			"    ${1:}",
+			"\\end{solution}"
 		],
 		"description": "insert solution"
 	},
-	"insert class": {
-		"prefix": "\\class",
-		"body": [
-		"%-------------------------------------------------------------------------------------------------%",
-		"\\newpage",
-		"\\section{Clase - ${1:Día} de ${2:Mes} de 202${3:Año}}",
-		"${4:}"
-		],
-		"description": "insert class"
-	},
-	"new vspace": {
-		"prefix": "\\verticalspace",
-		"body": [
-		" \\\\\\[0.${1:} cm] "
-		],
-		"description": "new vspace"
-	},
 	"Bold Text": {
-		"prefix": "\\bf",
+		"prefix": "@bf",
 		"body": [
-		"\\textbf{${1:}}"
+			"\\textbf{${1:}}"
 		],
 		"description": "Bold Text"
 	},
 	"Italic Text": {
-		"prefix": "\\it",
+		"prefix": "@it",
 		"body": [
-		"\\textit{${1:}}"
+			"\\textit{${1:}}"
 		],
 		"description": "Italic Text"
 	},
 	"Underline Text": {
-		"prefix": "\\ul",
+		"prefix": "@ul",
 		"body": [
-		"\\underline{${1:}}"
+			"\\underline{${1:}}"
 		],
 		"description": "Underline Text"
 	},
 	"Limit Template": {
-		"prefix": "\\limit",
+		"prefix": "@limit",
 		"body": [
-		"\\lim_{${1:} \\rightarrow ${2:}} "
+			"\\lim_{${1:} \\rightarrow ${2:}} "
 		],
 		"description": "Limit Template"
 	},
 	"Derivative Template": {
-		"prefix": "\\derivative",
+		"prefix": "@derivative",
 		"body": [
-		"\\frac{d ${1:}}{d ${2:}} "
+			"\\frac{d ${1:}}{d ${2:}} "
 		],
 		"description": "Derivative Template"
 	},
 	"Partial Template": {
-		"prefix": "\\partial",
+		"prefix": "@partial",
 		"body": [
-		"\\frac{\\partial ${1:}}{\\partial ${2:}} "
+			"\\frac{\\partial ${1:}}{\\partial ${2:}} "
 		],
 		"description": "Partial Template"
 	},
 	"Defined Integral": {
-		"prefix": "\\defintegral",
+		"prefix": "@dintegral",
 		"body": [
-		"\\int_{${1:}}^{${2:}} ${3:} \\, \\mathrm{d}${4:}"
+			"\\int_{${1:}}^{${2:}} ${3:} \\, \\mathrm{d}${4:}"
 		],
 		"description": "Defined Integral"
 	},
 	"Integral Template": {
-		"prefix": "\\integral",
+		"prefix": "@integral",
 		"body": [
-		"\\int ${1:} \\, \\mathrm{d}${2:}"
+			"\\int ${1:} \\, \\mathrm{d}${2:}"
 		],
 		"description": "Integral Template"
 	},
-	"Evaluate Integral": {
-		"prefix": "\\evalintegral",
-		"body": [
-		"\\left. ${1:} \\right|_{${2:}}^{${3:}}"
-		],
-		"description": "Evaluate Integral"
-	},
 	"Display Style": {
-		"prefix": "\\display",
+		"prefix": "@display",
 		"body": [
-		"\\displaystyle{${1:}}"
+			"\\displaystyle{${1:}}"
 		],
 		"description": "Display Style"
 	}
